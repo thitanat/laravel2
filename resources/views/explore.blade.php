@@ -11,6 +11,7 @@
         <div>
             <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-top:5%;">
                 @include('courses.course_card')
+                Test
             </div>
 
         </div>
