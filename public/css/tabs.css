@@ -1,0 +1,112 @@
+.tab-container {
+    position: fixed;
+    margin: auto;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.wrap {
+    width: 550px;
+    margin: 16px auto;
+    background: #FDFFFC;
+    border-radius: 1rem;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.wrap .active-grid-circle {
+    display: grid;
+    width: 100%;
+}
+
+.wrap .nav-circle {
+    width: 1.5rem;
+    height: .6rem;
+    border-radius: 100px;
+    background: #f24c5e;
+    position: relative;
+    margin-bottom: -4.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    bottom: 8.6rem;
+    left: 0%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.355s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.nav-grid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.nav-grid .nav-grid-items {
+    padding: 16px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-grid .nav-grid-items .icon {
+    color: #212121;
+    font-size: 2.8rem;
+}
+
+.nav-grid .nav-grid-items.active .icon {
+    color: #f24c5e;
+}
+
+.grid-item-active {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: zoomIn .255s cubic-bezier(0.46, 0.03, 0.21, 0.93);
+    animation: zoomIn .255s cubic-bezier(0.46, 0.03, 0.21, 0.93);
+}
+
+.container.theme-dark .wrap {
+    background: #212121;
+}
+
+.container.theme-dark .nav-grid .nav-grid-items .icon {
+    color: #eee;
+}
+
+.container.theme-dark .nav-grid .nav-grid-items.active .icon {
+    color: #f24c5e;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@keyframes moveActive {
+    0% {
+        width: .6rem;
+    }
+    20% {
+        width: 3rem;
+    }
+    100% {
+        width: 1.5rem;
+    }
+}
